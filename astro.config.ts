@@ -9,11 +9,11 @@ import {
   transformerNotationWordHighlight,
 } from "@shikijs/transformers";
 import { transformerFileName } from "./src/utils/transformers/fileName";
-import { SITE } from "./src/config";
+
 
 // https://astro.build/config
 export default defineConfig({
-  site: SITE.website,
+  site: "https://your-domain.vercel.app/",
   integrations: [
     sitemap({
       filter: page => SITE.showArchives || !page.endsWith("/archives"),
