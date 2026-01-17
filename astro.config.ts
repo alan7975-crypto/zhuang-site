@@ -34,8 +34,10 @@ export default defineConfig({
     },
   },
 
+  import type { PluginOption } from "vite";
+
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [tailwindcss()] as PluginOption,
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
     },
