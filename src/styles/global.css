@@ -60,6 +60,13 @@ html[data-theme="dark"] {
   .app-layout {
     @apply mx-auto w-full max-w-app px-4;
   }
+
+  .selection-accent {
+    ::selection {
+      background-color: var(--color-accent);
+      color: var(--color-background); /* 可選，看你要的文字顏色 */
+    }
+  }  
 }
 
 /* Base */
