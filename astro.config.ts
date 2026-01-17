@@ -10,23 +10,17 @@ import {
 } from "@shikijs/transformers";
 import { transformerFileName } from "./src/utils/transformers/fileName";
 
-// https://astro.build/config
 export default defineConfig({
-  // 直接填你網站網址，不用 SITE
-  site: "https://your-domain.vercel.app/",
-  
+  site: "https://your-domain.vercel.app/", // <- 不要用 SITE
+
   integrations: [
     sitemap({
-      // 直接用 true/false，避免引用 SITE
-      filter: page => true, // 永遠顯示所有頁面，包含 /archives
+      filter: page => true, // <- 用 true 或 false，不要 SITE
     }),
   ],
 
   markdown: {
-    remarkPlugins: [
-      remarkToc,
-      [remarkCollapse, { test: "Table of contents" }]
-    ],
+    remarkPlugins: [remarkToc, [remarkCollapse, { test: "Table of contents" }]],
     shikiConfig: {
       themes: { light: "min-light", dark: "night-owl" },
       defaultColor: false,
