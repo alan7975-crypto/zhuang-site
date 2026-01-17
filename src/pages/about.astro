@@ -1,0 +1,44 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import { SITE } from "@/config";
+---
+
+<Layout title={`About — ${SITE.title}`}>
+  <Header />
+  <main class="app-layout prose mx-auto">
+    <h1>關於我</h1>
+
+    <p>
+      我是小莊，一名在日商體系工作的 MIS / 系統工程師，專長在於把混亂的流程整理成可維運、可複製、可交接的系統。
+    </p>
+
+    <p>
+      這個網站《小莊的系統筆記》，不是技術教科書，而是一個工程師如何思考系統、風險、決策與長期價值的實戰筆記庫。
+    </p>
+
+    <h2>我關心的主題</h2>
+    <ul>
+      <li>企業資訊系統設計與維運（ERP / MIS / SOP）</li>
+      <li>工程師的決策模型與風險控管</li>
+      <li>長期主義投資與可複利的人生策略</li>
+      <li>如何在不爆肝的前提下打造高穩定輸出系統</li>
+    </ul>
+
+    <h2>為什麼寫這個網站？</h2>
+    <p>
+      因為我發現，大多數問題不是技術問題，而是系統設計問題；
+      而大多數焦慮，也不是能力問題，而是時間結構問題。
+    </p>
+
+    <p>
+      如果這些筆記能幫助你少踩一個坑、少走一段彎路，那這個網站就已經值回票價了。
+    </p>
+
+    <p>
+      如果你想交流、合作或單純聊天，歡迎透過頁面上的社群連結找到我。
+    </p>
+  </main>
+  <Footer />
+</Layout>
