@@ -9,6 +9,7 @@ import {
   transformerNotationWordHighlight,
 } from "@shikijs/transformers";
 import { transformerFileName } from "./src/utils/transformers/fileName";
+import type { PluginOption } from "vite";
 
 export default defineConfig({
   site: "https://your-domain.vercel.app/", // <- 不要用 SITE
@@ -33,8 +34,6 @@ export default defineConfig({
       ],
     },
   },
-
-  import type { PluginOption } from "vite";
 
   vite: {
     plugins: [tailwindcss()] as PluginOption, // <- 這裡加上 as PluginOption
