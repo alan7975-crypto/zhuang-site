@@ -1,5 +1,5 @@
 export const SITE = {
-  website: "https://your-domain.vercel.app/",
+  website: "https://zhuang-site.vercel.app/",
   author: "莊宗翰",
   profile: "https://github.com/alan7975-crypto",
   desc: "IT 系統工程 × 投資思維 × 長期主義｜記錄系統實務、決策模型與可複利的人生策略。",
