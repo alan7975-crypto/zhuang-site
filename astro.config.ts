@@ -11,11 +11,11 @@ import {
 import { transformerFileName } from "./src/utils/transformers/fileName";
 
 export default defineConfig({
-  site: "https://your-domain.vercel.app/", // <- 不要用 SITE
+  site: "https://your-domain.vercel.app/",
 
   integrations: [
     sitemap({
-      filter: page => true, // <- 用 true 或 false，不要 SITE
+      filter: (page) => true, // 可以改成篩選條件
     }),
   ],
 
@@ -34,15 +34,10 @@ export default defineConfig({
     },
   },
 
-  import tailwindcss from "@tailwindcss/vite";
-  import type { PluginOption } from "vite";
-
-  export default defineConfig({
-    vite: {
-      // @ts-ignore
-      plugins: [tailwindcss()],
-    },
-  });
+  vite: {
+    // @ts-ignore
+    plugins: [tailwindcss()],
+  },
 
   image: {
     responsiveStyles: true,
