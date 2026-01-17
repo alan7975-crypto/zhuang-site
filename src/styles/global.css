@@ -33,6 +33,10 @@ html[data-theme="dark"] {
 
 /* Utilities */
 @layer utilities {
+  .font-app {
+    font-family: var(--font-app);
+  }
+
   .bg-background {
     background-color: var(--color-background);
   }
