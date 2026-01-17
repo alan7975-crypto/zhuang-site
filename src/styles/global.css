@@ -60,14 +60,6 @@ html[data-theme="dark"] {
   .app-layout {
     @apply mx-auto w-full max-w-app px-4;
   }
-
-  .selection-accent {
-    ::selection {
-      background-color: var(--color-accent);
-      color: var(--color-background); /* 可選，看你要的文字顏色 */
-    }
-  }  
-  
 }
 
 /* Base */
@@ -83,7 +75,13 @@ html[data-theme="dark"] {
   }
 
   body {
-    @apply flex min-h-svh flex-col bg-background font-app text-foreground selection-accent;
+    @apply flex min-h-svh flex-col bg-background font-app text-foreground;
+  }
+
+  /* 直接在 body 寫 selection，不用 @apply */
+  body::selection {
+    background-color: var(--color-accent);
+    color: var(--color-background);
   }
 
   a,
