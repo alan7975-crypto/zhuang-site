@@ -1,6 +1,5 @@
-console.log("CONFIG LOADED", SITE.title);
 export const SITE = {
-  website: "https://your-domain.vercel.app/", // 之後部署完成再改成正式網址
+  website: "https://your-domain.vercel.app/",
   author: "莊宗翰",
   profile: "https://github.com/alan7975-crypto",
   desc: "IT 系統工程 × 投資思維 × 長期主義｜記錄系統實務、決策模型與可複利的人生策略。",
@@ -22,3 +21,5 @@ export const SITE = {
   lang: "zh-TW",
   timezone: "Asia/Taipei",
 } as const;
+
+console.log("CONFIG LOADED", SITE.title); // <- 放這裡就安全了
