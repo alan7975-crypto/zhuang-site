@@ -9,20 +9,10 @@ import {
   transformerNotationWordHighlight,
 } from "@shikijs/transformers";
 import { transformerFileName } from "./src/utils/transformers/fileName";
-import tailwindcss from "@tailwindcss/vite";
-import type { PluginOption } from "vite";
-
-export default defineConfig({
-  vite: {
-    plugins: [tailwindcss()] as PluginOption[], // <-- 這裡加上 as PluginOption[]
-  },
-});
 
 export default defineConfig({
   site: "https://your-domain.vercel.app/", // <- 不要用 SITE
 
-
-  
   integrations: [
     sitemap({
       filter: page => true, // <- 用 true 或 false，不要 SITE
@@ -44,7 +34,14 @@ export default defineConfig({
     },
   },
 
+  import tailwindcss from "@tailwindcss/vite";
+  import type { PluginOption } from "vite";
 
+  export default defineConfig({
+    vite: {
+      plugins: [tailwindcss()] as PluginOption[], // <-- 這裡加上 as PluginOption[]
+    },
+  });
 
   image: {
     responsiveStyles: true,
