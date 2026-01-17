@@ -1,5 +1,5 @@
 import { defineConfig, envField, fontProviders } from "astro/config";
-import tailwindcss from "@tailwindcss/vite";
+import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
@@ -14,9 +14,8 @@ export default defineConfig({
   site: "https://your-domain.vercel.app/",
 
   integrations: [
-    sitemap({
-      filter: (page) => true, // 可以改成篩選條件
-    }),
+    tailwind(), // <- 官方整合，不會型別衝突
+    sitemap({ filter: page => true }),
   ],
 
   markdown: {
@@ -32,11 +31,6 @@ export default defineConfig({
         transformerNotationDiff({ matchAlgorithm: "v3" }),
       ],
     },
-  },
-
-  vite: {
-    // @ts-ignore
-    plugins: [tailwindcss()],
   },
 
   image: {
