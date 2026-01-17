@@ -15,7 +15,7 @@ import { SOCIALS } from "../constants";
 const posts = await getCollection("blog");
 
 // 只保留 blog 根目錄下的檔案
-const rootPosts = posts.filter(post => !post.slug.includes("/"));
+const rootPosts = posts.filter(post => !post.id.includes("/")); // 使用 post.id
 
 const sortedPosts = getSortedPosts(rootPosts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
