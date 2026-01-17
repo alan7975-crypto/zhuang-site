@@ -12,6 +12,7 @@ import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
 import { SITE } from "../config";
 import { SOCIALS } from "../constants";
 import HeroImg from "@/assets/images/hero.jpg";
+import HeroMeImg from "@/assets/images/hero1.jpg";
 
 const posts = await getCollection("blog");
 
@@ -40,7 +41,12 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     class="rounded-lg shadow-lg mt-4 w-full max-w-[500px] mx-auto"
     loading="lazy"
   />  <!-- 注意加 .src -->
-  {console.log(HeroImg)}
+  <img 
+    src={HeroMeImg.src} 
+    alt="HeroMe Image" 
+    class="rounded-lg shadow-lg mt-4 w-full max-w-[500px] mx-auto"
+    loading="lazy"
+  />  <!-- 注意加 .src -->
 
 
   {SOCIALS.length > 0 && (
