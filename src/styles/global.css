@@ -31,9 +31,10 @@ html[data-theme="dark"] {
   --color-border: var(--border);
 }
 
-@layer utilities {
-  .border-border {
-    border: 1px solid var(--color-border);
+  @layer utilities {
+    .outline-accent {
+      outline-color: rgba(0, 108, 172, 0.75); /* 直接寫 75% 透明度 */
+    }
   }
   .outline-accent {
     outline-color: var(--color-accent);
@@ -48,7 +49,7 @@ html[data-theme="dark"] {
 
 @layer base {
   * {
-    @apply border-border outline-accent/75;
+    @apply border-border outline-accent;
     scrollbar-width: auto;
     scrollbar-color: var(--color-muted) transparent;
   }
