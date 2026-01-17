@@ -31,9 +31,24 @@ html[data-theme="dark"] {
   --color-border: var(--border);
 }
 
+@layer utilities {
+  .border-border {
+    border: 1px solid var(--color-border);
+  }
+  .outline-accent {
+    outline-color: var(--color-accent);
+  }
+  .max-w-app {
+    @apply max-w-3xl;
+  }
+  .app-layout {
+    @apply mx-auto w-full max-w-app px-4;
+  }
+}
+
 @layer base {
   * {
-    @apply border border-gray-300 outline-accent/75;
+    @apply border-border outline-accent/75;
     scrollbar-width: auto;
     scrollbar-color: var(--color-muted) transparent;
   }
@@ -53,20 +68,10 @@ html[data-theme="dark"] {
   }
 }
 
-@utility max-w-app {
-  @apply max-w-3xl;
-}
-
-@utility app-layout {
-  @apply mx-auto w-full max-w-app px-4;
-}
-
 .active-nav {
   @apply underline decoration-wavy decoration-2 underline-offset-8;
 }
 
-/* Source: https://piccalil.li/blog/a-more-modern-css-reset/ */
-/* Anything that has been anchored to should have extra scroll margin */
 :target {
   scroll-margin-block: 1rem;
 }
