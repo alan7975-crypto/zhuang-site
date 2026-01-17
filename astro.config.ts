@@ -1,4 +1,4 @@
-import { defineConfig, envField, fontProviders } from "astro/config";
+import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import remarkToc from "remark-toc";
@@ -11,7 +11,8 @@ import {
 import { transformerFileName } from "./src/utils/transformers/fileName";
 
 export default defineConfig({
-  site: "https://your-domain.vercel.app/",
+  site: "https://zhuang-site.vercel.app/",
+  integrations: [tailwind()],
 
   integrations: [
     tailwind(), // <- 官方整合，不會型別衝突
