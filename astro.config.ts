@@ -14,8 +14,7 @@ export default defineConfig({
   site: "https://zhuang-site.vercel.app/",
 
   integrations: [
-    tailwind(), // 官方整合 Tailwind，不會有 Plugin 型別衝突
-    sitemap({ filter: page => true }),
+    tailwind(), // 官方 Tailwind 整合
   ],
 
   markdown: {
