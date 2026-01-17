@@ -26,8 +26,8 @@ export const SOCIALS: Social[] = [
   {
     name: "FB",
     href: "https://www.facebook.com/redbeanplus",
-    linkTitle: "FB",
-    active: true,
+    linkTitle: `${SITE.title} on Facebook`,
+    icon: IconFacebook,  // <- 加上 icon
   },
   {
     name: "LinkedIn",
