@@ -35,13 +35,13 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
   <p>{SITE.desc}</p>  <!-- 這裡會顯示你的副標描述 -->
   <img 
-    src={HeroImg.src}   <!-- 注意加 .src -->
+    src={HeroImg.src}
     alt="Hero Image" 
     width={HeroImg.width}
     height={HeroImg.height}
     class="rounded-lg shadow-lg mt-4 w-full max-w-3xl mx-auto"
     loading="lazy"
-  />
+  /> <!-- 注意加 .src -->
   {console.log(HeroImg)}
 
 
