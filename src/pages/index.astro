@@ -34,12 +34,8 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   </a>
 
   <p>{SITE.desc}</p>  <!-- 這裡會顯示你的副標描述 -->
-  <img 
-    src={HeroImg} 
-    alt="Hero Image" 
-    class="rounded-lg shadow-lg mt-4 w-full max-w-3xl mx-auto" 
-    loading="lazy"
-  />
+  <img src={HeroImg} alt="Hero Image" class="rounded-lg shadow-lg mt-4 w-full max-w-3xl mx-auto" />
+  {console.log(HeroImg)}
 
 
   {SOCIALS.length > 0 && (
