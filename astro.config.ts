@@ -39,7 +39,8 @@ export default defineConfig({
 
   export default defineConfig({
     vite: {
-      plugins: [tailwindcss()] as PluginOption[], // <-- 這裡加上 as PluginOption[]
+      // @ts-ignore
+      plugins: [tailwindcss()],
     },
   });
 
