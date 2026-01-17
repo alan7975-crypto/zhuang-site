@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/*@import "./typography.css";*/
+@import "./typography.css";
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
