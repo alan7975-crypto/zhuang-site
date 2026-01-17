@@ -12,16 +12,21 @@ import { transformerFileName } from "./src/utils/transformers/fileName";
 
 // https://astro.build/config
 export default defineConfig({
+  // 直接填你網站網址，不用 SITE
   site: "https://your-domain.vercel.app/",
+  
   integrations: [
     sitemap({
-      // 直接用 true/false，不要 import SITE
-      filter: page => true, // 如果你想永遠顯示 archives，可以用 true
-      // 或 filter: page => !page.endsWith("/archives") 如果你不想顯示
+      // 直接用 true/false，避免引用 SITE
+      filter: page => true, // 永遠顯示所有頁面，包含 /archives
     }),
   ],
+
   markdown: {
-    remarkPlugins: [remarkToc, [remarkCollapse, { test: "Table of contents" }]],
+    remarkPlugins: [
+      remarkToc,
+      [remarkCollapse, { test: "Table of contents" }]
+    ],
     shikiConfig: {
       themes: { light: "min-light", dark: "night-owl" },
       defaultColor: false,
@@ -34,16 +39,19 @@ export default defineConfig({
       ],
     },
   },
+
   vite: {
     plugins: [tailwindcss()],
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
     },
   },
+
   image: {
     responsiveStyles: true,
     layout: "constrained",
   },
+
   env: {
     schema: {
       PUBLIC_GOOGLE_SITE_VERIFICATION: envField.string({
@@ -53,6 +61,7 @@ export default defineConfig({
       }),
     },
   },
+
   experimental: {
     preserveScriptOrder: true,
     fonts: [
