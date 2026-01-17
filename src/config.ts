@@ -1,7 +1,7 @@
 export const SITE = {
   website: "https://your-domain.vercel.app/", // 之後部署完成再改成正式網址
   author: "莊宗翰",
-  profile: "https://github.com/你的GitHub帳號",
+  profile: "https://github.com/alan7975-crypto",
   desc: "IT 系統工程 × 投資思維 × 長期主義｜記錄系統實務、決策模型與可複利的人生策略。",
   title: "小莊的系統筆記",
   ogImage: "og-image.jpg",
