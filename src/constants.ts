@@ -24,10 +24,10 @@ export const SOCIALS: Social[] = [
     icon: IconGitHub,
   },
   {
-    name: "X",
-    href: "https://x.com/username",
-    linkTitle: `${SITE.title} on X`,
-    icon: IconBrandX,
+    name: "FB",
+    href: "https://www.facebook.com/redbeanplus",
+    linkTitle: "FB",
+    active: true,
   },
   {
     name: "LinkedIn",
