@@ -1,3 +1,4 @@
+console.log("CONFIG LOADED", SITE.title);
 export const SITE = {
   website: "https://your-domain.vercel.app/", // 之後部署完成再改成正式網址
   author: "莊宗翰",
