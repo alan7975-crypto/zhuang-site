@@ -1,4 +1,4 @@
-import { defineConfig, envField, fontProviders } from "astro/config";
+import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import remarkToc from "remark-toc";
@@ -12,7 +12,11 @@ import { transformerFileName } from "./src/utils/transformers/fileName";
 
 export default defineConfig({
   site: "https://zhuang-site.vercel.app/",
-  integrations: [tailwind()],
+
+  integrations: [
+    tailwind(),
+    sitemap({ filter: () => true }),
+  ],
 
   markdown: {
     remarkPlugins: [remarkToc, [remarkCollapse, { test: "Table of contents" }]],
@@ -32,29 +36,5 @@ export default defineConfig({
   image: {
     responsiveStyles: true,
     layout: "constrained",
-  },
-
-  env: {
-    schema: {
-      PUBLIC_GOOGLE_SITE_VERIFICATION: envField.string({
-        access: "public",
-        context: "client",
-        optional: true,
-      }),
-    },
-  },
-
-  experimental: {
-    preserveScriptOrder: true,
-    fonts: [
-      {
-        name: "Google Sans Code",
-        cssVariable: "--font-google-sans-code",
-        provider: fontProviders.google(),
-        fallbacks: ["monospace"],
-        weights: [300, 400, 500, 600, 700],
-        styles: ["normal", "italic"],
-      },
-    ],
   },
 });
