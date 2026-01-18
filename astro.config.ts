@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import remarkToc from "remark-toc";
@@ -36,5 +36,19 @@ export default defineConfig({
   image: {
     responsiveStyles: true,
     layout: "constrained",
+  },
+
+  experimental: {
+    preserveScriptOrder: true,
+    fonts: [
+      {
+        name: "Google Sans Code",
+        cssVariable: "--font-google-sans-code",
+        provider: fontProviders.google(),
+        fallbacks: ["monospace"],
+        weights: [300, 400, 500, 600, 700],
+        styles: ["normal", "italic"],
+      },
+    ],
   },
 });
